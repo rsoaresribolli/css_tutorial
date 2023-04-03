@@ -1,0 +1,53 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+/* 
+. Block level elemets break line and stack on top of each other, while inline don't
+. Block level element use 100% of the space they have, while inline elements use only the size of the content.
+*/
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-size: 2rem;
+    font-family: 'Roboto', sans-serif;
+}
+
+/* p {
+    background-color: lightgray;
+}
+
+.opposite {
+    display: inline-block;
+    background-color: #333;
+    color: whitesmoke;
+    margin-top: 100px;
+    height: 200px;
+    padding: 2rem;
+} */
+
+ul {
+    /* display: none; Not good for accessibility as element is removed from document flow.*/
+    list-style-type: none;
+    padding: 0.5rem;
+    text-align: right;
+    background-color: #000;
+    margin: 0;
+}
+
+li {
+    display: inline-block;
+    margin-inline: 0.5rem;
+}
+
+li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+li a:hover, l a:focus {
+    text-decoration: underline;
+}
