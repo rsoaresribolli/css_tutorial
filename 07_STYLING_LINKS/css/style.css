@@ -1,0 +1,32 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+body {
+    padding: 10%;
+    font-size: 2rem;
+    font-family: 'Roboto', sans-serif;
+}
+
+/* Anchor tag */
+a {
+    text-decoration: underline;
+    cursor: pointer;
+    color: hsl(207, 44%, 49%);
+}
+
+/* 
+    pseudoclass: represent the state of the element. 
+    THE ORDER IS IMPORTANT!
+*/
+a:visited {
+    color: purple;
+}
+
+a:hover, a:focus     {
+    /* color: hsl(190, 44%, 49%); /* One option is to use a color with the same tone (changing the first value of hsl)*/
+    opacity: 0.8; /* be careful with this technique because some parent element can also change opacity. */
+    background: gold;
+}
+
+a:active {
+    color: red;
+}
