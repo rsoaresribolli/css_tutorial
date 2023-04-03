@@ -1,0 +1,48 @@
+/* "*" selects all elements. CSS Reset. */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100vw; /* It doesn't account the scrollbar in the side, so it creates the horizontal scrollbar */
+    /* width: 100%; It solves the precedent problem, but it is not necessary as it is the default setting */
+    min-height: 100vh; /* Sets to min-height to the full page when there is no content to achieve that */
+}
+
+/* 
+    If we use absolute font sizes we remove the user choice of changing it (with browser settings). 
+    The px are one example of absolute font size. 
+    rem = root em -> It's a measure relative to the root font size (defined by the browser)
+    em -> Look to the parent element font size
+*/
+
+main {
+    width: 50vw; /* viewport width units. 1% of the viewport */
+    background-color: skyblue;
+    font-size: 2rem;
+}
+
+p {
+    /* font-size: 16px; */
+    /* font-size: 2em; */
+    font-size: 2rem;
+    width: 40ch; /* 40 characters */
+}
+
+/* 
+    By using percentage, we dimension elements having the parent element as reference.
+    If the dimensions of the parent element shrink, for example, the child element will do too.
+*/
+
+header {
+    width: 80%;
+}
+
+h1 {
+    border: 2px dashed red;
+    width: 50%;
+    font-size: 3rem;
+    padding: 0.5em; /* relative to the h1 font-size */
+}
