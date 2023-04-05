@@ -1,0 +1,146 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+* {
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-size: 1.5rem;
+    font-family: 'Roboto', sans-serif;
+    min-height: 200vh;
+}
+
+.outer-container {
+    border: 3px dashed #000;
+    width: 75vw;
+    height: 85vh;
+    margin: 40px auto;
+    position: relative;
+}
+
+.inner-container {
+    border: 2px solid #00f;
+    width: 40vw;
+    height: 50vh;
+    margin: 200px auto;
+}
+
+.box {
+    width: 150px;
+    height: 150px;
+    color: #fff;
+    padding: 1rem;
+}
+
+.absolute {
+    background-color: #00f;
+    /* position: static; default of all elements */
+
+
+    /*
+    Position Absolute
+        . We have to set at least one of top, left, right or bottom 
+        . Picks the closest ancestor with position relative
+        . Otherwise will pick the browser window     
+     */
+    position: absolute; 
+    top: 50px; /* from the top */ 
+    /* from the left */
+    /* 
+    Technique to remove element from the page but respecting accessibility. 
+    The element will be read.
+    */
+    left: -10000px; 
+    z-index: 1; /* We can use z-index to change who overrides who */
+}
+
+.relative {
+    background-color: #f00;
+    /* 
+    Position Relative
+        . Relative to its parent container
+    */
+    position: relative;
+    top: 300px;
+    left: 100px;
+}
+
+.fixed {
+    background-color: green;
+    /*
+    Position fixed
+        . Fixed from the top
+        . Will stay there even if page is scrolled
+        . Out of the flow of the page
+    */
+    position: fixed;
+    top: 100px;
+}
+
+.sticky {
+    background-color: #000;
+    position: sticky;
+    top: 0; /* Sticks to the top until parent container goes off page */
+}
+
+/* ///////////////////////////////////////////////// */
+
+html {
+    scroll-behavior: smooth; /* It has to be in html element (body doesn't work) */
+}
+
+section {
+    height: 100vh;
+}
+
+.blue {
+    background-color: #00f;
+}
+
+.red {
+    background-color: #f00;
+}
+
+.green {
+    background-color: green;
+}
+
+
+header, footer {
+    color: #fff;
+    text-align: center;
+    height: 100px; 
+}
+
+header {
+    position: sticky;
+    top: 0;
+    font-size: 5rem;
+}
+
+footer {
+    background-color: #000;
+    font-size: 3rem;
+    /* position: fixed;
+    bottom: 0;
+    width: 100%; */
+    /* Alternatively */
+    position: sticky;
+    bottom: 0;
+}
+
+a:visited {
+    color: #fff;
+}
+
+.social {
+    background-color: royalblue;
+    color: #fff;
+    font-size: inherit;
+    padding: 1rem;
+    position: fixed;
+    top: 30%;
+    left: 0;
+    z-index: 1;
+}
